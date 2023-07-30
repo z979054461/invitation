@@ -1,38 +1,5 @@
 @use "sass:math";
 
 .App {
-  width: 100vw;
-  height: 100vh;
-  transform-style: preserve-3d;
-  img {
-    position: absolute;
-    $imgWidth: 600px;
-    $imgHeight: 900px;
-    width: $imgWidth;
-    height: $imgHeight;
-    left: 50%;
-    top: 50%;
-    margin-left: -$imgWidth/2;
-    margin-top: -$imgHeight/2;
-    user-select: none;
-
-    $n: 10;
-    $r: 1000px;
-    $deg: 360deg / $n;
-    backface-visibility: hidden;
-    opacity: 0.5;
-    transition: opacity 0.2s ease-in-out;
-    &:hover {
-      opacity: 1;
-    }
-
-    @for $i from 0 through $n {
-      &:nth-child(#{$i}) {
-        $d: $i * $deg;
-        $x: math.sin($d) * $r;
-        $z: math.cos($d) * $r;
-        transform: translate3d(#{$x}, 0, #{$z}) rotateY(180deg + $d);
-      }
-    }
-  }
+  background-color: #000;
 }
